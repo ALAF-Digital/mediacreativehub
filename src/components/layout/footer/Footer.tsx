@@ -1,3 +1,5 @@
+import { Assets } from "../../../../public/assets/assets";
+
 export default function Footer() {
   return (
     <footer className="footer">
@@ -14,51 +16,13 @@ export default function Footer() {
               </div>
               <div className="socialLinks">
                 <ul>
-                  <li>
-                    <a href="#">
-                      <img
-                        src="./images/marketplace/twitter.svg"
-                        alt="twitter"
-                      />
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      <img
-                        src="./images/marketplace/linkedin.svg"
-                        alt="linkedin"
-                      />
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      <img
-                        src="./images/marketplace/facebook.svg"
-                        alt="facebook"
-                      />
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      <img src="./images/marketplace/github.svg" alt="github" />
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      <img
-                        src="./images/marketplace/angellist.svg"
-                        alt="angellist"
-                      />
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      <img
-                        src="./images/marketplace/dribble.svg"
-                        alt="dribble"
-                      />
-                    </a>
-                  </li>
+                  {Links.map((item, index) => (
+                    <li key={index}>
+                      <a href={item.url}>
+                        <img src={item.img} alt="" />
+                      </a>
+                    </li>
+                  ))}
                 </ul>
               </div>
             </div>
@@ -144,3 +108,30 @@ export default function Footer() {
     </footer>
   );
 }
+
+const Links = [
+  {
+    url: "#",
+    img: Assets.Marketplace.Twitter,
+  },
+  {
+    url: "#",
+    img: Assets.Marketplace.Linkedin,
+  },
+  {
+    url: "#",
+    img: Assets.Marketplace.Facebook,
+  },
+  {
+    url: "#",
+    img: Assets.Marketplace.Github,
+  },
+  {
+    url: "#",
+    img: Assets.Marketplace.AngelList,
+  },
+  {
+    url: "#",
+    img: Assets.Marketplace.Dribble,
+  },
+];

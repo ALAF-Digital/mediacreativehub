@@ -4,7 +4,7 @@ export default function LandingSection() {
       <div className="container">
         <div className="hero-sec-wrapper">
           <h1 className="main-heading">UNLOCK YOUR CREATIVITY</h1>
-          <p>
+          <p className="tw-my-4">
             Revolutionize your creative workflow with <br />
             our expertly crafted templates.
           </p>
