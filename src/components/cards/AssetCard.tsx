@@ -4,7 +4,10 @@ import { Assets } from "../../../public/assets/assets";
 
 export default function AssetCard({ item }: { item: any }) {
   return (
-    <Link href={`${Routes.Marketplace}/1`} className="common-img-box">
+    <Link
+      href={`${Routes.Marketplace}/1`}
+      className="common-img-box tw-flex-grow-[1!important] sm:tw-flex-grow-[0!important]"
+    >
       <img src={item.src} alt="" className="img-fluid" />
       <div className="title-price">
         <p className="name">{item.title}</p>

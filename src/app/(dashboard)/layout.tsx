@@ -1,3 +1,5 @@
-export default function Dashboard() {
-  return <div>Dashboard</div>;
+import { PropsWithChildren } from "react";
+
+export default function DashboardLayout({ children }: PropsWithChildren) {
+  return children;
 }

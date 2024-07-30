@@ -1,5 +1,7 @@
 "use client";
+import Link from "next/link";
 import { Assets } from "../../../public/assets/assets";
+import { Routes } from "@/constants/enums";
 
 export default function AssetSliderSection() {
   return (
@@ -10,14 +12,21 @@ export default function AssetSliderSection() {
             <div className="col-md-12 p-0">
               <div className="collection-slider">
                 {AssetsData.map((asset, index) => (
-                  <a href="#" className="collection-slide" key={index}>
+                  <Link
+                    href={Routes.Marketplace}
+                    className="collection-slide"
+                    key={index}
+                  >
                     <img src={asset.src} alt="" className="img-fluid" />
                     <h4 className="slide-title">{asset.title}</h4>
-                  </a>
+                  </Link>
                 ))}
               </div>
               <div className="browse-collection container">
-                <a href="#" className="browse-collection-txt">
+                <a
+                  href="#"
+                  className="browse-collection-txt tw-flex tw-items-center tw-justify-end"
+                >
                   Browse collections
                   <svg
                     xmlns="http://www.w3.org/2000/svg"

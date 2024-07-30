@@ -1,3 +1,6 @@
+import { Routes } from "@/constants/enums";
+import Link from "next/link";
+
 export default function GetStartedSection() {
   return (
     <section className="get-started">
@@ -6,9 +9,9 @@ export default function GetStartedSection() {
         {/* <input type="email" placeholder="Sign up to get started">  */}
         <div className="sign-up-cta">
           <span>Sign up to get started</span>
-          <button className="btn primary-btn" type="submit">
-            Sign Up
-          </button>
+          <Link href={Routes.Signup}>
+            <button className="btn primary-btn">Sign Up</button>
+          </Link>
         </div>
         <p className="note">
           List your 3D Designing templates with us and{" "}

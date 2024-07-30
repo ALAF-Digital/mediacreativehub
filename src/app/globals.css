@@ -8,21 +8,16 @@
   }
 }
 
-/* .slick-loading .slick-list {
-  background: #fff url("./ajax-loader.gif") center center no-repeat;
-} */
+::-webkit-scrollbar {
+  width: 10px;
+  color: #3b3b3d;
+}
 
-/* Icons */
-/* @font-face
-{
-    font-family: 'slick';
-    font-weight: normal;
-    font-style: normal;
+::-webkit-scrollbar-thumb {
+  background: #f28f5d;
+  border-radius: 10px;
+}
 
-    src: url('./fonts/slick.eot');
-    src: url('./fonts/slick.eot?#iefix') format('embedded-opentype'), url('./fonts/slick.woff') format('woff'), url('./fonts/slick.ttf') format('truetype'), url('./fonts/slick.svg#slick') format('svg');
-} */
-/* Arrows */
 .slick-prev,
 .slick-next {
   font-size: 0;

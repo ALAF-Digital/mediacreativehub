@@ -1,5 +1,5 @@
-import AssetCard from "@/components/cards/AssetCard";
 import { Assets } from "../../../../../public/assets/assets";
+import { ClientImageSlider, ClientRelatedData } from "./AssetItemClient";
 
 export default function AssetItem() {
   return (
@@ -10,15 +10,7 @@ export default function AssetItem() {
             <div className="col-lg-9 p-0 custom-border-rgt">
               <div className="row">
                 <div className="col-12">
-                  <div className="big-img-slider-wrap">
-                    <div className="big-img-slider">
-                      {SliderImages.map((src, index) => (
-                        <div key={index}>
-                          <img src={src} className="img-fluid" alt="Image 1" />
-                        </div>
-                      ))}
-                    </div>
-                  </div>
+                  <ClientImageSlider />
                 </div>
               </div>
 
@@ -74,10 +66,10 @@ export default function AssetItem() {
                     </div>
                     <div className="buy-now-ctas">
                       <button className="add-to-card-btn">
-                        <img src="./images/marketplace/cart-icon.svg" alt="" />
+                        <img src={Assets.Marketplace.Cart} alt="" />
                       </button>
                       <button className="add-to-card-btn">
-                        <img src="./images/marketplace/cart-icon.svg" alt="" />
+                        <img src={Assets.Marketplace.Cart} alt="" />
                       </button>
                       <button
                         className="btn primary-btn buy-now-btn w-100"
@@ -128,17 +120,15 @@ export default function AssetItem() {
         </div>
       </section>
 
-      <section className="all-assets ar-assets related-assets">
+      <section className="all-assets ar-assets related-assets tw-mt-5">
         <h2 className="main-heading">Related assets</h2>
         <div className="common-img-box-wrap">
-          <div className="common-img-box-slider">
-            {Data.map((item, index) => (
-              <AssetCard item={item} key={index} />
-            ))}
-          </div>
-
-          <div className="browse-collection container-fluid">
-            <a href="#" className="browse-collection-txt">
+          <ClientRelatedData />
+          <div className="browse-collection container-fluid ">
+            <a
+              href="#"
+              className="browse-collection-txt tw-flex tw-items-center tw-justify-end"
+            >
               See more
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -163,16 +153,6 @@ export default function AssetItem() {
   );
 }
 
-const SliderImages = [
-  Assets.Marketplace.Slider1,
-  Assets.Marketplace.Slider1,
-  Assets.Marketplace.Slider1,
-  Assets.Marketplace.Slider1,
-  Assets.Marketplace.Slider1,
-  Assets.Marketplace.Slider1,
-  Assets.Marketplace.Slider1,
-];
-
 const Data = [
   {
     src: Assets.Marketplace.Paramid,
@@ -187,6 +167,26 @@ const Data = [
   },
   {
     src: Assets.Marketplace.Paramid,
+    title: "Astronaut",
+    price: "$10.00",
+  },
+  {
+    src: Assets.Marketplace.Astronaut,
+    title: "Astronaut",
+    price: "$10.00",
+  },
+  {
+    src: Assets.Marketplace.Astronaut,
+    title: "Astronaut",
+    price: "$10.00",
+  },
+  {
+    src: Assets.Marketplace.Astronaut,
+    title: "Astronaut",
+    price: "$10.00",
+  },
+  {
+    src: Assets.Marketplace.Astronaut,
     title: "Astronaut",
     price: "$10.00",
   },
